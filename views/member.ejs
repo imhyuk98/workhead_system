@@ -1,0 +1,94 @@
+<%-include('header.ejs')%>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                background: linear-gradient(#fff, #fff);
+                color: #000;
+                text-align: center;
+            }
+
+            h2 {
+                border-bottom: 1px solid #aaa;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+            }
+
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                text-align: center;
+                border-right: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #a2d2ff;
+                color: #000;
+            }
+
+            tr:nth-child(even) {
+                background-color: #fff;
+                border-bottom: 1px solid #ddd;
+            }
+
+            a {
+                color: red;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <table border="1">
+            <tr>
+                <th>idx</th>
+                <th>이름</th>
+                <th>학번</th>
+                <th>전화번호</th>
+                <th>관리</th>
+            </tr>
+
+            <% lists.forEach(function(item){ %>
+                <tr>
+                    <td>
+                        <%=item.idx%>
+                    </td>
+                    <td>
+                        <%=item.name%>
+                    </td>
+                    <td>
+                        <%=item.stu_num%>
+                    </td>
+                    <td>
+                        <%=item.phone%>
+                    </td>
+                    <td><a href="/contactDelete?idx=<%=item.idx%>" onclick="return confirm('정말 삭제할까요?')">삭제</a></td>
+                </tr>
+                <% }) %>
+        </table>
+    </body>
+
+    </html>
+
+
+    <%-include('footer.ejs')%>

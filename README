@@ -1,0 +1,18 @@
+<설치한 npm>
+1. npm install express --save
+2. npm install ejs
+3. npm install body-parser
+4. npm install mysql2
+5. npm install dotenv
+6. npm install express-session
+
+<Mysql>
+DB_HOST=aws.connect.psdb.cloud
+DB_USERNAME=ojeu40ht8g9arfhuup40
+DB_PASSWORD=pscale_pw_Lcdi5YCLVJrePlDFn7ULd4B7FneVSmPMdP40d0IosJa
+DB_NAME=unidago
+
+DB_HOST=aws.connect.psdb.cloud
+DB_USERNAME=hbogk0x9pzc0nlkfg3fu
+DB_PASSWORD=pscale_pw_k0KFlPFT0OwW4IDvHeoeUqBak8xLPf5bOyhbIZLg6va
+DB_NAME=unidago

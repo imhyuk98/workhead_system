@@ -1,0 +1,117 @@
+<%-include('header.ejs')%>
+
+    <section class="section section--visual">
+        <div class="inner">
+
+            <div class="summary">
+                <h2 class="summary__title">일머리&nbsp;사관학교&nbsp;</h2>
+                <p class="summary__description">문제해결역량, 협동역량, 창의역량을 길러주는 PBL수업 기반의 일머리사관학교 프로그램 </p>
+            </div>
+
+            <form id="sign-form" method="post" action="/loginProc">
+                <% if(user_id){ %>
+
+                    <%=name%>님 환영합니다.&nbsp&nbsp&nbsp&nbsp <div class="btn-group">
+                            <a class="btn logout" href="/logout">Logout</a>
+                        </div>
+
+                        <% } else { %>
+                            <ul>
+                                <li><input class="input--text" type="text" name="user_id" placeholder="User ID"></li>
+                                <li><input class="input--text" type="password" name="pw" placeholder="Password">
+                                    <p class="caption"></p>
+                                </li>
+                                <li>
+                                    <button class="btn btn--primary" type="submit">Sign in</button>
+                                    <p class="caption"></p>
+                                </li>
+                            </ul>
+                            <% } %>
+            </form>
+
+        </div>
+    </section>
+
+    <!--FEATURE-->
+    <section class="section section--feature">
+
+        <div class="summary">
+            <h2 class="summary__title">일머리 사관학교 홍보영상</h2>
+            <p class="summary__description">내용</p>
+        </div>
+
+        <div class="video">
+            <div class="video-ratio">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aQUAz1xeRbc?si=V2eCrSh3vxDfoqlk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="tiles">
+            <div class="inner">
+
+                <ul class="clearfix">
+                    <li>
+                        <img src="img/feature-tile__platform.png" alt="platform">
+                        <h3>소제목</h3>
+                        <p>내용</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__projects.png" alt="projects">
+                        <h3>소제목</h3>
+                        <p>내용</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__work.png" alt="work">
+                        <h3>소제목</h3>
+                        <p>내용</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__build.png" alt="build">
+                        <h3>소제목</h3>
+                        <p>내용</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--WHERE IS-->
+    <!-- <section class="section section--where-is">
+        <div class="inner">
+
+            <div class="summary">
+                <h2 class="summary__title">Where is GitHub?</h2>
+                <p class="summary__description">GitHub is where people build software. More than 18 million people use
+                    GitHub
+                    to
+                    discover, fork, and contribute to over 48 million projects.</p>
+            </div>
+
+            <div id="map"></div>
+
+        </div>
+    </section> -->
+
+    <!--PRICING CARD-->
+    <!-- <section class="section section--pricing">
+        <div class="inner">
+
+            <div class="card">
+                <div class="cell cell1">
+                    <a class="btn btn--primary" href="#">Sign up for GitHub</a>
+                </div>
+                <div class="cell cell2">
+                    Public projects are always free. Work together across unlimited private repositories for $7 / month.
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+
+
+    <%-include('footer.ejs')%>
